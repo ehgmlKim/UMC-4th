@@ -1,11 +1,11 @@
-package com.example.umc4.dto;
+package com.example.umc4.board.dto;
 
-import com.example.umc4.domain.Board;
+import com.example.umc4.board.domain.Board;
+import com.example.umc4.user.domain.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.annotation.processing.Generated;
 import java.util.Optional;
 
 @Getter
@@ -15,17 +15,17 @@ public class BoardListResponseDto {
 
     private String title;
     private String content;
-    private Long userId;
+    private User user;
 
     public BoardListResponseDto(Board board) {
         this.title = board.getTitle();
         this.content = board.getContent();
-        this.userId = board.getUserId();
+        this.user = board.getUser();
     }
 
     public BoardListResponseDto(Optional<Board> board) {
         this.title = board.get().getTitle();
         this.content = board.get().getContent();
-        this.userId = board.get().getUserId();
+        this.user = board.get().getUser();
     }
 }

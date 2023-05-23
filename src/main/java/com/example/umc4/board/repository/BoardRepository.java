@@ -1,7 +1,7 @@
-package com.example.umc4.repository;
+package com.example.umc4.board.repository;
 
-import com.example.umc4.domain.Board;
-import com.example.umc4.dto.BoardListResponseDto;
+import com.example.umc4.board.domain.Board;
+import com.example.umc4.board.dto.BoardListResponseDto;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

@@ -1,6 +1,7 @@
-package com.example.umc4.dto;
+package com.example.umc4.board.dto;
 
-import com.example.umc4.domain.Board;
+import com.example.umc4.board.domain.Board;
+import com.example.umc4.user.domain.User;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,20 +11,20 @@ import lombok.NoArgsConstructor;
 public class BoardSaveRequestDto {
     private String title;
     private String content;
-    private Long userId;
+    private User user;
 
     @Builder
-    public BoardSaveRequestDto(String title, String content, Long userId) {
+    public BoardSaveRequestDto(String title, String content, User user) {
         this.title = title;
         this.content = content;
-        this.userId = userId;
+        this.user = user;
     }
 
     public Board toEntity() {
         return Board.builder()
                 .title(title)
                 .content(content)
-                .userId(userId)
+                .user(user)
                 .build();
     }
 }

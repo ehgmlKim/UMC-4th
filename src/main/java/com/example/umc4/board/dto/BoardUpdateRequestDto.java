@@ -1,4 +1,4 @@
-package com.example.umc4.dto;
+package com.example.umc4.board.dto;
 
 import lombok.Builder;
 import lombok.Getter;
