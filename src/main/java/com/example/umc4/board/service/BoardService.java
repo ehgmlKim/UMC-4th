@@ -21,7 +21,7 @@ public class BoardService {
 
     @Transactional
     public String boardSave(BoardSaveRequestDto requestDto) {
-        return boardRepository.save(requestDto.toEntity()).getId() + ": 글이 등록되었습니다.";
+        return boardRepository.save(requestDto.toEntity()).getPId() + ": 글이 등록되었습니다.";
     }
 
     @Transactional

@@ -15,7 +15,7 @@ public class Board {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="post_id")
-    private Long id;
+    private Long pId;
     @Column(name="title")
     private String title;
     @Column(name="content")

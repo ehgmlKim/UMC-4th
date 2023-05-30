@@ -19,6 +19,7 @@ public class BoardController {
     //전체 글 조회
     @GetMapping("/board/posts")
     public List<BoardListResponseDto> getAllBoard() {
+
         return boardService.findAllBoard();
     }
     //글 등록

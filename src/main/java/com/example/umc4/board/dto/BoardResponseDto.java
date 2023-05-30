@@ -12,7 +12,7 @@ public class BoardResponseDto {
     private User userId;
 
     public BoardResponseDto(Board entity) {
-        this.id = entity.getId();
+        this.id = entity.getPId();
         this.title = entity.getTitle();
         this.content = entity.getContent();
         this.userId = entity.getUser();
